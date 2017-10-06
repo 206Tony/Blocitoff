@@ -1,0 +1,74 @@
+*, *::before, *::after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+	font-size: 100%;
+}
+
+body {
+	background-color: #fffff;
+}
+
+.hero-content {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 7.5rem;
+	width: 100%;
+	background-color: #e4e4e4;
+}
+
+.hero-title {
+	padding: 0 0 0 2rem;
+}
+
+.new-task {
+	position: relative;
+	left: .5rem;
+	width: 6rem;
+	padding: .1rem;
+	margin: 0 0 1rem 1rem;
+}
+
+.task-content {
+	position: relative;
+	left: 0;
+	top: 7rem;
+	height: 100%;
+	width: 100%;
+}
+
+.task-list {
+	top: 5rem;
+}
+
+.task-description {
+	padding: 0 0 1rem 0;
+}
+
+
+@media (min-width: 640px) {
+	html { font-size: 100%; }
+	.hero-content {
+		height: 4 rem;
+	}
+	.new-task {
+		position: absolute;
+		left: 10rem;
+		top: 1rem;
+		width: 5rem;
+	}
+	.task-content {
+		position: relative;
+		left: 0;
+		top: 5rem;
+	}
+}
+
+h1 {
+    background-color: #0099ff;
+  }

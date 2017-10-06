@@ -13,14 +13,17 @@
   "author": "Bloc Inc",
   "license": "ISC",
   "dependencies": {
+    "angcli": "0.0.7",
+    "bower": "^1.8.2",
     "hapi": "~16.4.0",
-    "path": "^0.4.9",
-    "inert": "^4.2.0"
+    "inert": "^4.2.0",
+    "path": "^0.4.9"
   },
   "engines": {
     "node": ">=6.11.1"
   },
   "devDependencies": {
+    "@angular/cli": "^1.4.5",
     "connect-modrewrite": "^0.7.9",
     "es5-shim": "^4.0.1"
   }

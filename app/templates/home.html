@@ -1,0 +1,13 @@
+<section class="hero-content">
+	<h1 class="hero-title">Tasks</h1>
+	<button class="new-task">
+		<h4 class="task-btn">New Task</h4>
+	</button>
+</section>
+
+<section class="task-content">
+	<ul class="task-title" ng-repeat="task in home.tasks">
+		<h3>{{ task.title }}</h3>
+		<p class="task-description">Description: {{ task.description }}</p>
+	</ul>
+</section>
