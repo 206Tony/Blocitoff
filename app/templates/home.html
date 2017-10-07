@@ -1,13 +1,21 @@
-<section class="hero-content">
-	<h1 class="hero-title">Tasks</h1>
-	<button class="new-task">
-		<h4 class="task-btn">New Task</h4>
-	</button>
+<section class="task-box">
+	<h2>Active Tasks</h2>
+		<ol class="task-list">
+			<li ng-repeat="task in home.tasks">
+				<ul class="todo">
+					<li style="font-size: 16px;" >{{task.text}}</li>
+					<li style="text-indent: 15px;" >{{task.completed}}</li>
+					<li style="text-indent: 15px;" >{{task.expired}}</li>
+					<li style="text-indent: 15px;" >{{task.created}}</li>
+				</ul>
+			</li>
+		</ol>
+		<br/>
 </section>
 
-<section class="task-content">
-	<ul class="task-title" ng-repeat="task in home.tasks">
-		<h3>{{ task.title }}</h3>
-		<p class="task-description">Description: {{ task.description }}</p>
-	</ul>
+<section class="form-box">
+	<form class="add-form">
+		<input placeholder="Add a Task" ng-model="home.newTask"/>
+		<button class="btn btn-primary" type="button" ng-click="home.addTask(home.newTask)">Add Task</button>
+	</form>
 </section>
