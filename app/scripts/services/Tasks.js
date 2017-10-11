@@ -1,6 +1,6 @@
 (function() {
-	function ExpiredTasks($firebaseArray) {
-		var ref = firebase.database().ref();
+	function Task($firebaseArray) {
+		var ref = firebase.database().ref().child('tasks');
 		var tasks = $firebaseArray(ref);
 
 		tasks.forEach(function(task) {
@@ -18,5 +18,5 @@
 
 	angular
 		.module('blocitoff')
-		.run(['$firebaseArray', ExpiredTasks]);
+		.factory('Task', ['$firebaseArray', Task]);
 })();

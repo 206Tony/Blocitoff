@@ -7,10 +7,17 @@
 			});
 
 		$stateProvider
-			.state('home', {
+			.state('main', {
 				url: '/',
-				controller: 'HomeCtrl as home',
-				templateUrl: '/templates/home.html'
+				controller: 'MainCtrl as main',
+				templateUrl: '/templates/main.html'
+			})
+
+		$stateProvider
+			.state('history', {
+				url: '/history',
+				controller: 'HistoryCtrl as history',
+				templateUrl: '/templates/histroy.html'
 			});
 	}
 	angular
