@@ -8,14 +8,16 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
   <link rel="stylesheet" href="/styles/main.css">
 </head>
+<body>
 
-	<nav class="navbar">
-		<a ui-sref="main">Current Tasks</a> | <a ui-sref="history">Task History</a>
-	</nav>
+	<div class="container">
+		<div class="user-info pull-right">
+			<a ui-sref="main">Current Tasks</a> | <a ui-sref="history">Task History</a>
+		</div>
+	</div>
 	
 <ui-view></ui-view>
-	<script src='https://momentjs.com/downloads/moment.min.js'></script>
-
+<script src='https://momentjs.com/downloads/moment.min.js'></script>
 <!-- Angular -->	
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 <!--AngularUI-Router --> 
@@ -32,7 +34,7 @@
 	    authDomain: "blocitoff-15932.firebaseapp.com",
 	    databaseURL: "https://blocitoff-15932.firebaseio.com",
 	    projectId: "blocitoff-15932",
-	    storageBucket: "",
+	    storageBucket: "blocitoff-15932.appspot.com",
 	    messagingSenderId: "704794156959"
 	  };
 	  firebase.initializeApp(config);

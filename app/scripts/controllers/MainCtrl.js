@@ -1,25 +1,32 @@
 (function() {
-	function MainCtrl(Task, $scope) {
-		this.tasks = Task.all;
+	function MainCtrl($firebaseArray) {
+		var ref = firebase.database().ref().child('tasks');
+		this.tasks = $firebaseArray(ref);
 
 		this.hide = function(task) {
-			return task.created < (moment().dayOfYear() - 7) || task.completed == true
-		};
+    return task.created < (moment().dayOfYear() - 7) || task.completed == true
+    };
 		
-		this.addTask = function(newTask) {
+		this.addTask = function(newTask, taskId) {
 			this.tasks.$add({ 
-				title: this.newTask, 
+				title: newTask, 
 				completed: false, 
-				description: this.description, 
-				created: firebase.database.ServerValue.TIMESTAMP
+				description: " ", 
+				expired: false,
+				created: moment().dayOfYear() 
 			});
-			return newTask
-			this.newTask = ' '
+				return newTask
+			this.addTask = ' '
+		}
+
+		this.completedTask = function(task) {
+			task.completed = true;
+			this.tasks.$save(task);
 		}
 
 	};
 
 	angular
 		.module('blocitoff')
-		.controller('MainCtrl', ['Task', '$scope', MainCtrl]);
+		.controller('MainCtrl', ["$firebaseArray", MainCtrl]);
 })();

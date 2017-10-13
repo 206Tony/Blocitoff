@@ -1,28 +1,22 @@
-<nav class="nav-bar">
-	<h5>Active Tasks | Task History</h5>
-</nav>
-
-<section class="hero-content">
-	<h1 class="hero-title">Active Tasks</h1>
-</section>
-
 <section class="new-task">
-	<div class="new-task-header"> 
-		Task Name | Description
-	</div>
-	<div class="new-task-field" ng-submit="main.addTask()">
-		<input type="text" class="task-field" ng-model="task.title" name="title" value= "New Task Name">
-		<input type="text" class="task-field" ng-model="task.description" name="text" value= "Describe Task">
-		<input type="submit" class="submit" value="Add Task">
+	<div class="new-task-header">Task Name | Description</div>
+	<div class="new-task-field">
+		<input type="text" class="task-field" ng-model="task.newTask" placeholder="Enter New Task">
+		<input type="text" class="task-field" ng-model="task.description" placeholder="Describe New Task">
+		<button class="btn btn-primary" type="button" ng-click="main.addTask(task.newTask)">Add Task</button>
 	</div>
 </section>
+<br/>
 
-<section task-content>
-	<div class="task-list" ng-repeat="task in main.tasks">
-		<div ng-hide="main.hide(task)">
-			<h3><input class="task-checkbox" type='checkbox'> {{task.title}}</h3>
-			<p>Created: {{task.created}}</p>
-			<p class="task-description">Description: {{task.description}}></p>
-		</div>
+<section class="container">
+	<h1 class="hero-title">Active Tasks</h1>
+		<ul class="task-list">
+			<li ng-repeat="task in main.tasks">
+				<ul>{{ task }}</ul>
+				<input type='checkbox' ng-model="task.completed" ng-change="history.completedTask(addTask)">
+			</li>
+
+		</ul>
 	</div>
+	<br/>
 </section>

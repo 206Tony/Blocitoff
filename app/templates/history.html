@@ -1,0 +1,24 @@
+<section class="container">
+  <h1 class="hero-title">Task History</h1>
+</section>
+
+<section class="new-task">
+  <div class="new-task-header">Task Name | Description</div>
+  <div class="new-task-field">
+    <input type="text" class="task-field" ng-model="task.newTask" placeholder="Enter New Task">
+    <input type="text" class="task-field" ng-model="task.description" placeholder="Describe New Task">
+    <button class="btn btn-primary" type="button" ng-click="main.addTask(task.newTask)">Add Task</button>
+  </div>
+</section>
+<br/>
+
+<section class="task-content">
+  <div class="task-list" ng-repeat="task in history.tasks">
+    <div ng-hide="history.show(task)">
+      <h3 class="main-title"><input class="task-checkbox" type="checkbox"> {{ task.title }}</h3>
+      <p>Created: {{ task.created }}
+      <p class="task-description">Description: {{ task.description }}</p>
+    </div>
+  </div>
+
+</section>

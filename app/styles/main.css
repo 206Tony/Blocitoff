@@ -4,31 +4,60 @@
 	box-sizing: border-box;
 }
 
-.task-box {
-	width: 100%;
+html {
 	height: 100%;
-	padding: .5rem;
+	width: 100%;
+}
+
+a:link {
+	color: blue;
+}
+
+a:hover {
+	color: lightgrey;
+}
+
+.hero-title {
+	color: #6699a5;
+	margin-top: 2px;
+}
+
+.new-task {
+	position: static;
+	top: 30px;
+	width: 100%;
 	background-color: #eeeeee;
 }
 
-.task-box .task-list li {
-	list-style-type: none;
-	margin: 0;
+.new-task-header {
+	padding: 1rem 0 1rem 3rem;
 }
 
-.task-box .task-list {
-	padding: 0;
+.new-task-field {
+	padding: 0rem 0 1rem 3rem;
 }
 
-.form-box {
-
+.task-field {
+	padding: auto;
+	margin: 0 1rem 0 0 ;
+	width: 33%;
 }
 
-.formbox .add-form {
-
+.task-content {
+	margin-bottom: 30px;
+	left: 0;
+	height: 100%;
+	width: 100%;
 }
 
-table {
-	width: 80%;
-	border: 1px;
+.task-list {
+	position: relative;
+	margin-top: auto;
+	padding: 0rem 2.5rem 0 2.5rem
+}
+
+.task-checkbox {
+	position: relative;
+	bottom: .25rem;
+	right: .25rem;
 }
