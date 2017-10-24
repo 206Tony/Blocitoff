@@ -13,9 +13,8 @@
 				templateUrl: '/templates/main.html'
 			})
 
-		$stateProvider
 			.state('history', {
-				url: '/history',
+				url: '/',
 				controller: 'HistoryCtrl as history',
 				templateUrl: '/templates/history.html'
 			});

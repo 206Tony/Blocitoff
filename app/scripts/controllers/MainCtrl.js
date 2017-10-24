@@ -9,14 +9,14 @@
 		
 		this.addTask = function(newTask, taskId) {
 			this.tasks.$add({ 
-				title: newTask, 
+				title: this.newTask, 
 				completed: false, 
-				description: " ", 
+				priority: this.setPriority, 
 				expired: false,
-				created: moment().dayOfYear() 
+				created: firebase.database.ServerValue.TIMESTAMP 
 			});
 				return newTask
-			this.addTask = ' '
+			this.newTask = ' '
 		}
 
 		this.completedTask = function(task) {
