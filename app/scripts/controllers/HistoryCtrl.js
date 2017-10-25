@@ -3,7 +3,7 @@
 		this.tasks = Task.all;
 
 		this.show = function(task) {
-			return task.created > (moment().dayOfYear() - 7) && task.completed == false
+			return task.created > (moment().dayOfYear() - 7) && task.completed == false;
 		};
 	}
 

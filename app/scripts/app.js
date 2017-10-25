@@ -14,7 +14,7 @@
 			})
 
 			.state('history', {
-				url: '/',
+				url: '/history',
 				controller: 'HistoryCtrl as history',
 				templateUrl: '/templates/history.html'
 			});
